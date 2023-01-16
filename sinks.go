@@ -66,10 +66,12 @@ func setSinkView(s Sink, v ByteView) error {
 }
 
 // StringSink returns a Sink that populates the provided string pointer.
+// 根号有获取的字符串 构造一个stringsink的结构体实例
 func StringSink(sp *string) Sink {
 	return &stringSink{sp: sp}
 }
 
+// 2个成员 一个字符串指针 和一个byteview的类型
 type stringSink struct {
 	sp *string
 	v  ByteView
